@@ -31,6 +31,12 @@
         $("#overlay").delay(600).fadeOut(500);
       });
     })(django.jQuery);
+
+    // New inlines
+    function activate_row(row) {
+      console.log("addrow is being called");
+      $(row).find('select').not('[multiple]').selectpicker();
+    }
   </script>
   <script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";</script>
   <script type="text/javascript">window.__admin_utc_offset__ = "{% filter escapejs %}{% now "Z" %}{% endfilter %}";</script>

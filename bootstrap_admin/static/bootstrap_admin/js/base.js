@@ -63,6 +63,10 @@
       }
       return false;
     });
-    $('select').not('[multiple]').selectpicker();
+    $('select').not('[multiple]').each(function() {
+      if ($(this).parents('.empty-form').length == 0) {
+        $(this).selectpicker();
+      }
+    });
   });
 })(django.jQuery);
