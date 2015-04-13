@@ -68,5 +68,6 @@
         $(this).selectpicker();
       }
     });
+    $('input[type="file"]').fileinput({'showUpload':false});
   });
 })(django.jQuery);

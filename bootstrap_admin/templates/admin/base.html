@@ -8,6 +8,7 @@
   {% block bootstrap_admin_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap_admin/css/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap_admin/css/bootstrap-select.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap_admin/css/fileinput.css' %}">
   {% endblock bootstrap_admin_css %}
 
   <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'admin/css/base.css' %}{% endblock %}" />
@@ -31,12 +32,6 @@
         $("#overlay").delay(600).fadeOut(500);
       });
     })(django.jQuery);
-
-    // New inlines
-    function activate_row(row) {
-      console.log("addrow is being called");
-      $(row).find('select').not('[multiple]').selectpicker();
-    }
   </script>
   <script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";</script>
   <script type="text/javascript">window.__admin_utc_offset__ = "{% filter escapejs %}{% now "Z" %}{% endfilter %}";</script>
@@ -179,6 +174,7 @@
   </script>
   <script src="{% static 'bootstrap_admin/js/bootstrap.min.js' %}"></script>
   <script src="{% static 'bootstrap_admin/js/bootstrap-select.min.js' %}"></script>
+  <script src="{% static 'bootstrap_admin/js/fileinput/fileinput.min.js' %}"></script>
   <script src="{% static 'bootstrap_admin/js/base.js' %}"></script>
 {% endblock bootstrap_admin_js %}
 

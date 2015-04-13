@@ -1,3 +1,10 @@
+// New inlines
+function activate_row(row) {
+  console.log("addrow is being called");
+  $(row).find('select').not('[multiple]').selectpicker();
+  $(row).find('input[type="file"]').fileinput({'showUpload':false});
+}
+
 (function($) {
   $.fn.stackedFormset = function(options) {
   	var $rows = $(this);
