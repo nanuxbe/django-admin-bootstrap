@@ -63,5 +63,6 @@
       }
       return false;
     });
+    $('select').not('[multiple]').selectpicker();
   });
 })(django.jQuery);

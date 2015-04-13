@@ -7,6 +7,7 @@
 
   {% block bootstrap_admin_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap_admin/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap_admin/css/bootstrap-select.min.css' %}" />
   {% endblock bootstrap_admin_css %}
 
   <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'admin/css/base.css' %}{% endblock %}" />
@@ -165,7 +166,13 @@
   </div>
 
 {% block bootstrap_admin_js %}
+  <script type="text/javascript">
+    if ($ === undefined) {
+      jQuery = $ = django.jQuery;
+    }
+  </script>
   <script src="{% static 'bootstrap_admin/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'bootstrap_admin/js/bootstrap-select.min.js' %}"></script>
   <script src="{% static 'bootstrap_admin/js/base.js' %}"></script>
 {% endblock bootstrap_admin_js %}
 
